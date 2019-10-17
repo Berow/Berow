@@ -19,7 +19,7 @@ function createCard(data) {
     tile.classList.add('tile', 'is-child', 'box');
 
     let card = document.createElement('div');
-    card.classList.add('card', 'is-small');
+    card.classList.add('card', 'box');
 
     let header = document.createElement('header');
     header.classList.add('card-header');
