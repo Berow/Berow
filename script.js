@@ -149,12 +149,8 @@ function create5Card(data) {
             content.appendChild(hr1);
 
             let cloud = document.createElement('h2');
-            let condition = data.list[count].weather[0]['description'];          
-
-            if (condition.length < 12) {
-                condition += '<br> &nbsp';
-            }
-
+            let condition = data.list[count].weather[0]['description'];        
+          
             cloud.innerHTML = condition;
             content.appendChild(cloud);
 
@@ -204,8 +200,7 @@ button5Day.onclick = () => {
     button5Day.classList.add('is-loading');
     fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${city_id}&APPID=be3be6a75c756c0592803d5d8d6f3f3a`)
         .then(function (resp) { return resp.json() })
-        .then(function (data) {
-            console.log(data);
+        .then(function (data) {            
 
             create5Card(data);
             button5Day.classList.remove('is-loading');
