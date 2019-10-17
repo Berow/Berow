@@ -202,7 +202,7 @@ button5Day.onclick = () => {
         tileAncestor.removeChild(tileAncestor.firstChild);
     }
     button5Day.classList.add('is-loading');
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${city_id}&APPID=be3be6a75c756c0592803d5d8d6f3f3a`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${city_id}&APPID=be3be6a75c756c0592803d5d8d6f3f3a`)
         .then(function (resp) { return resp.json() })
         .then(function (data) {
             console.log(data);
